@@ -1,0 +1,12 @@
+// Name: Inversion
+// Copyright:
+// Author: Sebastian Lopez Osorno
+// Date: 01/05/2022
+// Description: 1) Suponga que un individuo desea invertir su capital en un banco y desea saber cuánto dinero ganara después de un mes si el banco paga a razón de 2 MOD  mensual.
+Algoritmo Inversion
+	Definir CP,GN Como Entero
+	Escribir 'Ingrese su capital: '
+	Leer CP
+	GN <- CP*(2/100)
+	Escribir 'Gano: ',GN,'$ de la inversion inicial de: ',CP,'$'
+FinAlgoritmo

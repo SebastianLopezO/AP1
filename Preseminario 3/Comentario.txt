@@ -1,0 +1,10 @@
+Sebastián López Osorno14:12
+La información planteada en el documento permite dar una retroalimentación con base a lo estudiado en sesiones anteriores 
+donde de igual forma se le da un enfoque mayor a  el "problema" visto desde la computación, para el cual se plantean unos 
+principios de comportamiento computacional para el cual se hace necesario el uso de los algoritmos que se componen de tres 
+parte las cuales son: entrada, procesos y salida, obteniendo de esta forma una expresión algorítmica para cualquier tipo de 
+problema con estructurado en un sistema abierto, cerrado o aislado. El problema se puede plantear mediante un fase de resolución
+ y otra de implementación en la cual se puede distinguir sus procesos, ya que en la resolución se plante, diseña y verifica el
+ algoritmo mediante representaciones gráfica y no graficas que permiten dar mayor entendiendo del como función, mientras la parte 
+de implementación está dada por un lenguaje de programación con una sintaxis con la que codificamos un algoritmo que se puede compilar
+ y ejecutar con la finalidad de testear su funcionamiento, para finalmente verificar y corregir errores.

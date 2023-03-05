@@ -1,0 +1,109 @@
+Algoritmo BeneficiosMetro
+	Definir VTA,VTti,VTtsVTT,VT,cont,estrato,edad,Dcivil,Vti,Vts,Tau,AuxEE,AMe,VTT,Tpaux,sumAux,Tam Como Entero
+	Definir IMhora Como Real
+	Definir TPmetro,Ecivil,Eempleo,res Como Caracter
+	Escribir 'Ingrese la hora en el siguiente formato {HH.MM}: '
+	Leer IMhora
+	cont <- 0
+	Tau <- 0
+	sumAux <- 0
+	Tpaux <- 0
+	Mientras IMhora>=5 Y IMhora<12 Hacer
+		cont <- cont+1
+		Escribir ''
+		Escribir 'Persona#',cont
+		Escribir 'Ingrese su estrato socio economico: '
+		Leer estrato
+		Escribir 'Ingrese (si-no) para determinar su estado de empleo: '
+		Leer Eempleo
+		// Beneficio
+		Si estrato<4 Y Eempleo='no' Entonces
+			Escribir 'Ingrese su edad para determinar el auxilio economico a dar: '
+			Leer edad
+			Escribir 'Ingrese su estado civil: '
+			Leer Ecivil
+			Segun estrato  Hacer
+				1:
+					Si edad<18 Entonces
+						AuxEE <- 180000
+					FinSi
+					Si edad>=18 Entonces
+						AuxEE <- 230000
+					FinSi
+				2:
+					Si edad<18 Entonces
+						AuxEE <- 150000
+					FinSi
+					Si edad>=18 Entonces
+						AuxEE <- 200000
+					FinSi
+				3:
+					Si edad<18 Entonces
+						AuxEE <- 120000
+					FinSi
+					Si edad>=18 Entonces
+						AuxEE <- 170000
+					FinSi
+				De Otro Modo:
+					AuxEE <- 0
+			FinSegun
+			Tpaux <- Tpaux+1
+		FinSi
+		Escribir 'El valor total del auxilio economico es de: ',AuxEE
+		sumAux <- sumAux+AuxEE
+		// valor tiquete
+		Vti <- 0
+		Vts <- 0
+		Repetir
+			Escribir '¿Que tipo de tiquete desea comprar? (sencillo o integrado):'
+			Leer TPmetro
+			Si TPmetro='sencillo' Entonces
+				VT <- 1800
+				Vts <- Vts+1
+			SiNo
+				Si TPmetro='integrado' Entonces
+					VT <- 2200
+					Vti <- Vti+1
+				FinSi
+			FinSi
+			// Aporte
+			Segun estrato  Hacer
+				1,2,3:
+					aporte <- 0.05
+					AMe <- aporte*VT
+					VTT <- AMe+VT
+					Escribir 'El valor inicial del tiquete ',TPmetro,'$ es de: ',VT,' pero debido al aporte del 5% quedo en: ',VTT,'$'
+				4,5,6:
+					aporte <- 0.10
+					AMe <- aporte*VT
+					VTT <- AMe+VT
+					Escribir 'El valor inicial del tiquete ',TPmetro,'$ es de: ',VT,' pero debido al aporte del 10% quedo en: ',VTT,'$'
+				De Otro Modo:
+					aporte <- 0
+					AMe <- aporte*VT
+					VTT <- AMe+VT
+					Escribir 'El valor inicial del tiquete ',TPmetro,'$ es de: ',VT,' pero debido al aporte del 0% quedo en: ',VTT,'$'
+			FinSegun
+			Si estrato<4 Y Eempleo='no' Y (Ecivil='casado' O Ecivil='casada') Entonces
+				Dcivil <- 0.5*VT
+			SiNo
+				Dcivil <- 0
+			FinSi
+			Escribir ''
+			Escribir '¿Desea comprar otro tiquete?(si-no): '
+			Leer res
+		Hasta Que res='no'
+		VTti <- Vti*2200*aporte
+		VTts <- 1800*aporte
+		Escribir 'El valor total a pagar por ',Vti,' integrados es de: ',Vti*2200,' pero con el aporte quedo en ',VTti
+		Escribir 'El valor total a pagar por ',Vts,' sencillo es de: ',Vti*2200,' pero con el aporte quedo en ',VTts
+		VTA <- VTti+VTts-Dcivil
+		Tau <- Tau+VTA
+		Escribir 'Ingrese la hora en el siguiente formato {HH.MM}: '
+		Leer IMhora
+	FinMientras
+	Tam <- sumAux-Tau
+	Escribir 'Total de dinero que va a aportar la administracion municipal para cubir el total de beneficios',Tam
+	Escribir 'Informar el total de personas beneficiadas con el auxilio ',Tpaux
+	Escribir 'Informe del total general del auxilio ',sumAux
+FinAlgoritmo

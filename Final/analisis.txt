@@ -1,0 +1,33 @@
+/*
+	Analisis
+
+		Datos:
+			Cuota de Administracion:
+				Metros Cuadrados
+				Tipo Inmueble("Casa","Apartamento")
+			Cuota de Aseo:
+				10% de Cuota Administracion
+				Estrato Socio Economico (1,2,3,4,5,6)
+			Cuota Gym:
+				Cantidad Personas
+			
+			Valor total a pagar
+				Cuota Gym
+				Cuota de Administracion
+				Cuota de Administracion
+		
+		Modelamiento:
+			DE:
+				Metros Cuadrados
+				Tipo Inmueble
+				Estrato Socio Economico
+				Cantidad Personas
+			DA:
+				Cuota de Administracion
+				Cuota de Aseo 
+				Porcentaje 10% Admin
+				Cuota Gym
+			DS:
+				
+		
+*/

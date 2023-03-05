@@ -1,0 +1,8 @@
+ACTIVIDAD DE REPASO
+Realizar un programa que, a través de subprogramas realice las siguientes tareas:
+• Capturare las cédulas de los N estudiantes de un grupo. Se sabe que un grupo nunca
+tiene más de 50 alumnos
+• Mostrar las cédulas de los N estudiantes de un grupo.
+• Buscar una cédula en al arreglo (Secuencial y binaria)
+• Insertar una nueva cédula (ordenado y desordenado)
+Para cada uno de las búsquedas e inserciones realizar las respectivas pruebas de escritorio
